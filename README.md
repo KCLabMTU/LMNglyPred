@@ -10,7 +10,7 @@ The programs were developed in the following environment. python : 3.8.3.final.0
 
 2. Run the Glycobiology LMNglyPred DeepNGlyPred Dataset.ipynb, and NGLYDE LMNnglydePred Glycobiology.ipynb to obtain reported results.
 
-*** For your convenience we have uploaded the ProtT5 feature extraction program for the protein sequence from ProtT5 as well as corresponding 1024 feature vector extraction program from the ProtT5 file. ***
+*** For your convenience we have uploaded the ProtT5 feature extraction program (analyze.py) for the protein sequence from ProtT5 as well as corresponding 1024 feature vector extraction program (DeepNGlyPred Prot_T5 feature extraction program.ipynb) from the ProtT5 file. ***
 
 If you need any futher help please contact Dr. Dukka B. KC at dbkc@mtu.edu.
 
