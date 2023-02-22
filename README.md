@@ -13,9 +13,3 @@ The programs were developed in the following environment. python : 3.8.3.final.0
 *** For your convenience we have uploaded the ProtT5 feature extraction program (analyze.py) for the protein sequence from ProtT5 as well as corresponding 1024 feature vector extraction program (DeepNGlyPred Prot_T5 feature extraction program.ipynb) from the ProtT5 file. ***
 
 If you need any futher help please contact Dr. Dukka B. KC at dbkc@mtu.edu.
-
-
-
-## Train Model
-Download training data from https://drive.google.com/drive/folders/1gBzmMNgJgl7XkopA40vip5xsoTVcYoE0?usp=sharing and copy to Data Folder.
-To be updated...
