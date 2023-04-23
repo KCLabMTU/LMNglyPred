@@ -15,4 +15,4 @@ Please place the GlycoBiology_NGlycositeAtlas.ipynb, df_indepenent_test_again_do
 
 *** For your convenience we have uploaded the ProtT5 feature extraction program (analyze_Cell_Mem_ER_Extrac_Protein.py) for the protein sequence from ProtT5 as well as corresponding 1024 feature vector extraction program (Feature Extraction Program from the generated files.ipynb) from the ProtT5 file. ***
 
-If you need any futher help please contact Dr. Dukka B. KC at dbkc@mtu.edu.
+If you need any futher help please contact Dr. Subash Chandra Pakhrin (pakhrins@uhd.edu) or Dr. Dukka B. KC at dbkc@mtu.edu.
