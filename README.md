@@ -3,9 +3,9 @@
 ## Authors
 
 Subash C Pakhrin<sup>1</sup>, Suresh Pokharel<sup>2</sup>, Kiyoko F Aoki-Kinoshita<sup>3</sup>, Moriah R Beck<sup>4</sup>,Tarun K Dam<sup>5</sup>, Doina Caragea<sup>6</sup>, Dukka B KC<sup>2*</sup>
-<br>
-<sup>1</sup>School of Computing, Wichita State University, 1845 Fairmount St., Wichita, KS 67260, USA<be>
-Department of Computer Science and Engineering Technology, University of Houston-Downtown, Houston, TX 77002, USA
+<br><br>
+<sup>1</sup>School of Computing, Wichita State University, 1845 Fairmount St., Wichita, KS 67260, USA<br>
+Department of Computer Science and Engineering Technology, University of Houston-Downtown, Houston, TX 77002, USA<br>
 <sup>2</sup>Department of Computer Science, Michigan Technological University, Houghton, MI, USA
 <br>
 <sup>3</sup>Glycan and Life Systems Integration Center (GaLSIC), Soka University, Tokyo 192-8577, Japan
