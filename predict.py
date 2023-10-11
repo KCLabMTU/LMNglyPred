@@ -1,7 +1,3 @@
-
-"""
-import required libraries
-"""
 import numpy as np
 import pandas as pd
 from Bio import SeqIO
@@ -10,7 +6,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix, matthews_corrcoef
 from tensorflow.keras.models import Model, Sequential, load_model
 from tensorflow.keras.optimizers import Adam
 from tqdm import tqdm
-
 # for ProtT5 model
 import torch
 from transformers import T5EncoderModel, T5Tokenizer
@@ -34,8 +29,10 @@ Load tokenizer and pretrained model ProtT5
 #!pip install -q SentencePiece transformers
 
 
-tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False )
-pretrained_model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
+tokenizer = T5Tokenizer.from_pretrained(
+    "Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
+pretrained_model = T5EncoderModel.from_pretrained(
+    "Rostlab/prot_t5_xl_uniref50")
 # pretrained_model = pretrained_model.half()
 gc.collect()
 
@@ -63,12 +60,14 @@ def get_protT5_features(sequence):
     sequence = [ ' '.join(sequence)]
     
     # set configurations and extract features
-    ids = tokenizer.batch_encode_plus(sequence, add_special_tokens=True, padding=True)
+    ids = tokenizer.batch_encode_plus(
+        sequence, add_special_tokens=True, padding=True)
     input_ids = torch.tensor(ids['input_ids']).to(device)
     attention_mask = torch.tensor(ids['attention_mask']).to(device)
     
     with torch.no_grad():
-        embedding = pretrained_model(input_ids=input_ids,attention_mask=attention_mask)
+        embedding = pretrained_model(
+            input_ids=input_ids,attention_mask=attention_mask)
     embedding = embedding.last_hidden_state.cpu().numpy()
     
     # find length
@@ -81,7 +80,9 @@ def get_protT5_features(sequence):
 
 
 # create results dataframe
-results_df = pd.DataFrame(columns = ['prot_desc', 'position','site_residue', 'probability', 'prediction'])
+results_df = pd.DataFrame(
+    columns = [
+        'prot_desc', 'position','site_residue', 'probability', 'prediction'])
 
 for seq_record in tqdm(SeqIO.parse(input_fasta_file, "fasta")):
     prot_id = seq_record.id
@@ -109,10 +110,12 @@ for seq_record in tqdm(SeqIO.parse(input_fasta_file, "fasta")):
             combined_model = load_model(model_path)
             
             # prediction results           
-            y_pred = combined_model.predict(np.array(X_test_pt5.reshape(1,1024)), verbose = 0)[0][0]
+            y_pred = combined_model.predict(
+                np.array(X_test_pt5.reshape(1,1024)), verbose = 0)[0][0]
             
             # append results to results_df
-            results_df.loc[len(results_df)] = [prot_id, site, amino_acid, y_pred, int(y_pred > cutoff_threshold)]
+            results_df.loc[len(results_df)] = [
+                prot_id, site, amino_acid, 1 - y_pred, int(y_pred < cutoff_threshold)]
 
 # Export results 
 print('Saving results ...')
