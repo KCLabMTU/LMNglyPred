@@ -48,12 +48,6 @@ xgboost==1.5.0
 ### Install Transformers
 <code> pip install -q SentencePiece transformers</code>
 
-### Model evaluation using the existing benchmark independent test set
-Please run the `evaluate_model.py` script.
-To evaluate our model on the independent test set, we have already placed the test sequences and corresponding ProtT5 features in `data/test/` folder. Once you install the requirements, run the following command:
-<br>
-<code>python evaluate_model.py</code>
-
 ### To run `LMNglyPred` model on your own sequences 
 
 In order to predict human N-linked glycosylation site using your own sequence, you need to have two inputs:
