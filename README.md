@@ -68,4 +68,4 @@ Link: https://academic.oup.com/glycob/article-abstract/33/5/411/7126679
 
 
 ## Contact
-If you need any further help please contact Dr. Subash Chandra Pakhrin (pakhrins@uhd.edu) or Dr. Dukka B. KC at dbkc@mtu.edu.
+If you need any further help please contact Dr. Subash Chandra Pakhrin (pakhrins@uhd.edu).
